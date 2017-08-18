@@ -14,7 +14,8 @@
                     {
                         "modules": false
                     }
-                ]
+                ],
+                "minify"
             ]
         },
         "test": {

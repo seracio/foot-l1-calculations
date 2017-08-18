@@ -1,6 +1,63 @@
 # foot-l1-calculations
 A set of calculation functions used in our projects for Ligue 1 data
 
+## Usage
+
+```bash
+yarn add lodash @seracio/foot-l1-calculations
+```
+
+```javascript
+import {getRankings} from '@seracio/foot-l1-calculations';
+
+const rankings = getRankings(teams, matches);
+```
+
+## API
+
+```javascript
+type Ranking = {
+    [id: string]: {
+        rank: number,
+        bp: number,
+        bc: number,
+        pts: number
+    }
+}
+```
+
+* `getRankings`: return an array of rankings for each weeks found in given matches
+
+```javascript
+getRankings(teams: Array<Team>, matches: Array<Matches>): Array<Ranking>
+```
+
+* `getPointsByMatchAndTeam`: return the num of points won for the given team Id in the given match
+
+```javascript
+getPointsByMatchAndTeam(match: Match, teamId: string): number
+```
+
+## Development
+
+* Tests
+
+```bash
+yarn test 
+yarn test -- --watch
+```
+
+* release a new version
+
+```bash
+yarn build
+git commit -am 'new version'
+npm version fix | major | minor
+git push 
+git push --tags
+npm deploy --access=public
+```
+
 ## License
 
 MIT License

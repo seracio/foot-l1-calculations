@@ -1,4 +1,6 @@
 // @flow
 import _ from 'lodash/fp';
+import { getPointsByMatchAndTeam } from './match';
+import { getRankings } from './ranking';
 
-const test = _.flow;
+export { getPointsByMatchAndTeam, getRankings };

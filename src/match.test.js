@@ -1,8 +1,9 @@
 // @flow
 import _ from 'lodash/fp';
+import { getPointsByMatchAndTeam } from './match';
 
-describe('test setup', () => {
-    it('should be ok', () => {
-        expect(true).toBe(true);
+describe('getPointsByMatch', () => {
+    it('should be defined', () => {
+        expect(getPointsByMatchAndTeam).toBeDefined();
     });
 });
