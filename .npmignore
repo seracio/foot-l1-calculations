@@ -1,0 +1,7 @@
+.vscode/*
+src/*
+.babelrc
+.flowconfig
+LICENSE
+README.md
+rollup.config.js
