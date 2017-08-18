@@ -1,0 +1,15 @@
+{
+    "plugins": [
+        "external-helpers",
+        "transform-flow-strip-types",
+        "transform-object-rest-spread"
+    ],
+    "presets": [
+        [
+            "es2015",
+            {
+                "modules": false
+            }
+        ]
+    ]
+}
