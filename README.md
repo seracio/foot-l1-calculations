@@ -55,7 +55,7 @@ git commit -am 'new version'
 npm version patch | major | minor
 git push 
 git push --tags
-npm deploy --access=public
+npm publish --access=public
 ```
 
 ## License
