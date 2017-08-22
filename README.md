@@ -52,7 +52,7 @@ yarn test -- --watch
 ```bash
 yarn build
 git commit -am 'new version'
-npm version fix | major | minor
+npm version patch | major | minor
 git push 
 git push --tags
 npm deploy --access=public
