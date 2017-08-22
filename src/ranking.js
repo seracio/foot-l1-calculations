@@ -28,7 +28,7 @@ export const computeRanks = ranking => {
     const ranks = _.flow(
         _.values,
         _.orderBy(
-            [_.get('points'), team => team.bp - team.bc, _.get('bp')],
+            [_.get('pts'), team => team.bp - team.bc, _.get('bp')],
             ['desc', 'desc', 'desc']
         ),
         _.map(_.get('id'))
