@@ -1,6 +1,6 @@
 {
   "name": "@seracio/foot-l1-calculations",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "main": "dist/index.js",
   "module": "dist/index.es6.js",
   "repository": "git@github.com:seracio/foot-l1-calculations.git",
