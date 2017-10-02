@@ -31,7 +31,8 @@
                         },
                         "modules": false
                     }
-                ]
+                ],
+                "minify"
             ]
         }
     }
