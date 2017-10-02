@@ -4,23 +4,37 @@
         "transform-object-rest-spread"
     ],
     "env": {
-        "production": {
+        "test": {
             "plugins": [
-                "external-helpers"
+                "transform-flow-strip-types"
             ],
             "presets": [
                 [
-                    "es2015",
+                    "env",
                     {
-                        "modules": false
+                        "targets": {
+                            "node": "current"
+                        }
                     }
-                ],
-                "minify"
+                ]
             ]
         },
-        "test": {
+        "production": {
+            "plugins": [
+                "transform-flow-strip-types"
+            ],
             "presets": [
-                "es2015"
+                [
+                    "env",
+                    {
+                        "targets": {
+                            "browsers": [
+                                "> 5% in FR"
+                            ]
+                        },
+                        "modules": false
+                    }
+                ]
             ]
         }
     }
