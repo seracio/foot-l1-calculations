@@ -22,13 +22,8 @@
             ],
             "presets": [
                 [
-                    "env",
+                    "es2015",
                     {
-                        "targets": {
-                            "browsers": [
-                                "> 5% in FR"
-                            ]
-                        },
                         "modules": false
                     }
                 ],
