@@ -4,23 +4,35 @@
         "transform-object-rest-spread"
     ],
     "env": {
+        "test": {
+            "presets": [
+                [
+                    "env",
+                    {
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ]
+            ]
+        },
         "production": {
             "plugins": [
                 "external-helpers"
             ],
             "presets": [
                 [
-                    "es2015",
+                    "env",
                     {
+                        "targets": {
+                            "browsers": [
+                                "> 5% in FR"
+                            ]
+                        },
                         "modules": false
                     }
                 ],
                 "minify"
-            ]
-        },
-        "test": {
-            "presets": [
-                "es2015"
             ]
         }
     }

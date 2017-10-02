@@ -6,14 +6,14 @@ const resolve = require('rollup-plugin-node-resolve');
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf-8'));
 
 module.exports = {
-    entry: 'src/index.js',
-    targets: [
+    input: 'src/index.js',
+    output: [
         {
-            dest: pkg.main,
+            file: pkg.main,
             format: 'cjs'
         },
         {
-            dest: pkg.module,
+            file: pkg.module,
             format: 'es'
         }
     ],

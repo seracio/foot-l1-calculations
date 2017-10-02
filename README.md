@@ -24,18 +24,32 @@ type Ranking = {
         pts: number
     }
 }
+
+type Score = [number, number];
 ```
 
-* `getRankings`: return an array of rankings for each weeks found in given matches
+* `getRankings`: returns an array of rankings for each weeks found in given matches
 
 ```javascript
 getRankings(teams: Array<Team>, matches: Array<Matches>): Array<Ranking>
 ```
 
-* `getPointsByMatchAndTeam`: return the num of points won for the given team Id in the given match
+* `getPointsByMatchAndTeam`: returns the num of points won for the given team Id in the given match
 
 ```javascript
 getPointsByMatchAndTeam(match: Match, teamId: string): number
+```
+
+* `getExpectedPointValue`: returns the expected value of a given goal 
+
+```javascript
+getExpectedPointValue(minute: number,scoreBefore: Score, isHome: boolean): number
+```
+
+* `getExpectedResult`: returns the probability of v, n, d for a given team
+
+```javascript
+getExpectedResult(minute: number, score: Score, isHome: boolean): [v: number, n: number, d: number];
 ```
 
 ## Development
